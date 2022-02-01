@@ -1,0 +1,59 @@
+$primary: #FE0002;
+$secondary: #F3F4F7;
+
+
+/* BREAKPOINTS */
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 80em) {
+        @content;
+      }
+    } @else if $point == laptop {
+      @media (min-width: 64em) {
+        @content;
+      }
+    } @else if $point == tablet {
+      @media (min-width: 50em) {
+        @content;
+      }
+    } @else if $point == phablet {
+      @media (min-width: 37.5em) {
+        @content;
+      }
+    } @else if $point == mobileonly {
+      @media (max-width: 37.5em) {
+        @content;
+      }
+    }
+    @else if $point == untilTablet {
+      @media (max-width: 60em) {
+        @content;
+      }
+    }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 52px;
+}
+
+h3 {
+  font-size: 42px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+.subtitle {
+  font-size: 18px;
+}

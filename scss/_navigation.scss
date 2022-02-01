@@ -1,0 +1,64 @@
+.navigation {
+    .row {
+        justify-content: space-between;
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            .logo-text {
+                font-family: 'Montserrat', sans-serif;
+                color: $primary;
+                font-weight: 700;
+                font-size: 26px;
+            }
+        }
+    
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+
+                .button {
+                    padding: 12px 18px !important ;
+                }
+
+                li.menu-link {
+                    padding: 1.5rem 2rem 1.5rem 0;
+                    position: relative;
+
+                    a {
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 50%;
+                            height: 4px;
+                            background-color: $primary;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: .2s all ease;
+                        }
+                        
+                        &.active, &:hover {
+                            color: $primary;
+                            transition: .2s all ease;
+
+                            &:after {
+                                visibility: visible;
+                                opacity: 1;
+                                transition: .2s all ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

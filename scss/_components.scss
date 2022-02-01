@@ -1,0 +1,49 @@
+.button {
+    padding: 1rem 2rem !important;
+    font-weight: 700;
+    background-color: $primary;
+    color: white;
+    border: 2px solid $primary;
+    display: inline-block;
+    text-align: center;
+    transition: all .2s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover, &:active {
+      background-color: darken($primary, 10%);
+      border-color:  darken($primary, 10%);
+      transition: all .2s ease;
+      color: white;
+    }
+
+    &.full {
+      width: 100%;
+    }
+
+    &.btn-white {
+        background-color: white;
+        color: $primary;
+        border: 2px solid white;
+
+    }
+
+    &.btn-hollow {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    &.btn-hollow-primary {
+      background-color: transparent;
+      color: $primary;
+      border: 2px solid $primary;
+    }
+
+    &.btn-hollow-black {
+      background-color: transparent;
+      border: 1px solid #D4D5D8;
+      color: black;
+    }
+}
+ 
