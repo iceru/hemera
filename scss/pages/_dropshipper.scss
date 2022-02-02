@@ -1,0 +1,33 @@
+.benefits {
+    .button {
+        font-size: 14px;
+    }
+}
+
+.products {
+    .container {
+        position: relative;
+
+        .cta {
+            margin-bottom: 100px;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.product-items {
+    margin-bottom: 100px;
+    text-align: center;
+
+    .text-header {
+        margin-bottom: 20px;
+        font-size: 48px;
+    }
+
+    .subtitle {
+        margin-bottom: 40px;
+    }
+}

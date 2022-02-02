@@ -1,0 +1,22 @@
+.supplier {
+    .hero-alt {
+        margin-bottom: 6rem;
+        .row {
+            min-height: 60vh;
+            align-items: center;
+        }
+
+        .background {
+            img {
+                height: 100% !important;
+            }
+        }
+    }
+
+    .join {
+        padding: 6rem 0;
+        h2 {
+            padding-right: 8rem;
+        }
+    }
+}

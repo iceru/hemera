@@ -2,7 +2,12 @@
 @import 'variables';
 @import 'components';
 @import 'navigation';
-@import 'index';
+@import 'footer';
+@import 'pages/index';
+@import 'pages/dropshipper';
+@import 'pages/supplier';
+@import 'pages/blogs';
+@import 'pages/contact';
 
 body,html {
     padding: 0;
@@ -13,6 +18,12 @@ body,html {
 
 ul {
     list-style-type: none;
+}
+
+.wrapper-container {
+    .container {
+        position: relative;
+    }
 }
 
 a {

@@ -1,0 +1,53 @@
+.blogs {
+    padding-bottom: 100px;
+    .blog-item {
+        padding: 40px 2rem;
+        background-color: $secondary;
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .blog-title {
+            margin-bottom: .75rem;
+        }
+
+        .date {
+            margin-bottom: 1rem;
+            color: rgba($color: #000000, $alpha: 0.6);
+        }
+
+        .blog-desc {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .small-title {
+        margin-bottom: 20px;
+    }
+
+    .blog-item-small {
+        padding: 2rem;
+        background-color: $secondary;
+        margin-bottom: 52px;
+
+        .image-wrapper {
+            margin-bottom: 20px;
+        }
+
+        .blog-title {
+            font-size: 21px;
+        }
+    }
+
+    .socials {
+        padding: 36px;
+        background-color: $secondary;
+        margin-bottom: 2rem;
+
+        i {
+            font-size: 42px;
+        }
+    }
+}
