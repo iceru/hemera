@@ -31,7 +31,8 @@ footer {
         .footer-menu {
             ul {
                 display: flex;
-
+                flex-wrap: wrap;
+                padding: 0;
                 li {
                     font-family: 'Barlow', sans-serif;
                     font-weight: 600;
@@ -42,6 +43,15 @@ footer {
 
                     &:last-child {
                         border: none;
+                    }
+                }
+
+                @include breakpoint(untilTablet) {
+                    justify-content: center;
+                    li {
+                        margin-bottom: 1rem;
+                        font-size: 18px;
+                        line-height: 1.25rem;
                     }
                 }
             }

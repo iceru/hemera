@@ -9,17 +9,29 @@
             justify-content: center;
 
             h1 {
-                font-size: 54px;
                 margin-bottom: 20px;
             }
 
             p {
-                font-size: 19px;
                 margin-bottom: 2rem;
             }
 
             .button {
                 font-size: 18px;
+            }
+
+            @include breakpoint(untilTablet) {
+                order: 2;
+                padding: 1rem;
+                background-color: rgba($color: white, $alpha: 0.6);
+                margin-top: -6.5rem;
+                .button {
+                    width: 100%;
+
+                    &:first-child {
+                        margin-bottom: 1rem;
+                    }
+                }
             }
         }
         .hero-image {
@@ -33,6 +45,21 @@
 
                 img {
                     width: 125%;
+                }
+            }
+            
+
+            @include breakpoint(untilTablet) {
+                order: 1;
+                padding: 0;
+
+                .image-wrapper {
+                    position: relative;
+                    right: 0;
+
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -68,6 +95,20 @@
             }
         }
     }
+    @include breakpoint(untilTablet) {
+       .background {
+           display: none;
+       }
+
+       .container {
+           > .row {
+               .about-text {
+                   padding-right: 0;
+               }
+           }
+       }
+    }
+
 }
 
 .how-to {
@@ -77,24 +118,42 @@
         .row {
             align-items: center;
             min-height: 80vh;
-            h2 {
-                position: relative;
-                z-index: 3;
+            .text {
+                h2 {
+                    position: relative;
+                    z-index: 3;
+                }
             }
         
-            .image-wrapper {
-                position: absolute;
-                right: 0;
-                display: flex;
-                justify-content: flex-end;
-                height: 100%;
-                top: 0;
-
-                img {
-                    width: 100%;
+            .image {
+                .image-wrapper {
+                    position: absolute;
+                    right: 0;
+                    display: flex;
+                    justify-content: flex-end;
+                    height: 100%;
+                    top: 0;
+    
+                    img {
+                        width: 100%;
+                    }
                 }
             }
 
+            @include breakpoint(untilTablet) {
+                .text {
+                    order: 2;
+                    margin-top: -10rem;
+                }
+
+                .image {
+                    order: 1;
+
+                    .image-wrapper {
+                        position: relative;
+                    }
+                }
+            }
         }
     }
 }
@@ -103,59 +162,116 @@
     margin-bottom: 3rem;
     .item-left {
         background-color: $secondary;
-        padding: 3rem;
         position: relative;
-        padding-left: 8rem;
         margin-bottom: 2rem;
         margin-right: 4rem;
 
         .d-flex {
             align-items: center;
         }
-
-        .bg {
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-
-            img {
-                height: 100%;
-            }
+        .item-text {
+            padding-right: 3rem;
         }
         .item-image{
-            margin-right: 3rem;
+            padding: 3rem;
             z-index: 4;
             position: relative;
+
+            &:after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 50%;
+                content: '';
+                background-color: $primary;
+                mix-blend-mode: multiply;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .image-wrapper {
+                position: relative;
+            }
+        }
+
+        @include breakpoint(untilTablet) {
+            background-color: white;
+            margin-right: 0;
+            margin-bottom: 2rem;
+            .d-flex {
+                flex-direction: column;
+            }
+
+            .item-text {
+                padding: 0;
+            }
+
+            .item-image {
+                background-color: $secondary;
+                margin-bottom: 2rem;
+            }
         }
     }
 
     .item-right {
         background-color: $secondary;
-        padding: 3rem;
         position: relative;
-        padding-right: 8rem;
         margin-bottom: 2rem;
         margin-left: 4rem;
-
+        .item-text {
+            padding-left: 3rem;
+        }
         .d-flex {
             align-items: center;
         }
 
-        .bg {
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
-
-            img {
-                height: 100%;
-            }
-        }
         .item-image{
-            margin-left: 3rem;
+            padding: 3rem;
             z-index: 4;
             position: relative;
+
+            &:after {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 50%;
+                content: '';
+                background-color: $primary;
+                mix-blend-mode: multiply;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .image-wrapper {
+                position: relative;
+            }
+        }
+        @include breakpoint(untilTablet) {
+            background-color: white;
+            margin-bottom: 2rem;
+            margin-left: 0;
+            .d-flex {
+                flex-direction: column;
+            }
+
+            .item-text {
+                padding: 0;
+                order: 2;
+            }
+
+            .item-image {
+                background-color: $secondary;
+                margin-bottom: 2rem;
+                order: 1;
+            }
         }
     }
 }
@@ -181,6 +297,38 @@
             .aware-text {
                 z-index: 4;
                 position: relative;
+                margin-left: 1rem;
+            }
+
+            .mobile {
+                display: none;
+            }
+
+            .desktop {
+                display: block;
+            }
+
+            @include breakpoint(untilTablet) {
+                .desktop {
+                    display: none;
+                }
+
+                .mobile {
+                    display: block;
+                }
+
+                .aware-text {
+                    margin-left: 0;
+                }
+
+                .image-wrapper {
+                    position: relative;
+                    margin-bottom: 1rem;
+
+                    img {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -216,6 +364,10 @@
 
 .problem {
     padding: 5rem 0;
+
+    @include breakpoint(untilTablet) {
+        padding: 2rem 0;
+    }
 
     .problem-header {
         h2, p {
@@ -257,9 +409,10 @@
                 border-bottom: 0;
                 justify-content: center;
                 margin-bottom: 3rem;
+                flex-wrap: nowrap;
 
                 .btn-primary {
-                    background-color: rgba($color: $primary, $alpha: 0.4);
+                    background-color: lighten($color: $primary, $amount: 30%);
                     border-color: rgba($color: $primary, $alpha: 0.1);
                     margin: 0 1rem;
 
@@ -282,12 +435,20 @@
                             box-shadow: none;
                             font-size: 21px;
                             font-weight: bold;
+
+                            @include breakpoint(untilTablet) {
+                                font-size: 18px;
+                            }
                         }
                     }
 
                     .accordion-body {
                         background-color: $secondary;
                         font-size: 18px;
+
+                        @include breakpoint(untilTablet) {
+                            font-size: 1rem;
+                        }
                     }
                 }
             }

@@ -33,6 +33,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <link rel="stylesheet" href="css/style.css">
@@ -52,6 +55,37 @@
                         yang
                         merasa senang dan bersyukur bisa sukses jualan online sebagai mitra kami:
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-item">
+        <div class="list-image-item">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="image-wrapper">
+                        <img src="/images/index/dropshipper.png" alt="Dropshiper">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h5>Dropshipper</h5>
+                    <p>Enggak punya modal, dan pengen jualan? enggak perlu stock barang dan kirim barang
+                        plus dapat website E-commerce profesional</p>
+                </div>
+            </div>
+        </div>
+        <div class="list-image-item">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="image-wrapper">
+                        <img src="/images/index/dropshipper.png" alt="Dropshiper">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h5>Dropshipper</h5>
+                    <p>Enggak punya modal, dan pengen jualan? enggak perlu stock barang dan kirim barang
+                        plus dapat website E-commerce profesional</p>
                 </div>
             </div>
         </div>
@@ -248,6 +282,8 @@
         $("div[data-include]").each(function () {
             $(this).load($(this).attr("data-include"));
         });
+
+        $('.slider-item').slick()
     });
 </script>
 

@@ -22,9 +22,20 @@
     margin-bottom: 100px;
     text-align: center;
 
+    @include breakpoint(untilTablet) {
+        text-align: left;
+
+        .image-wrapper {
+            margin-bottom: 2rem;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
     .text-header {
         margin-bottom: 20px;
-        font-size: 48px;
     }
 
     .subtitle {

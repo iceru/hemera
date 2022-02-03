@@ -8,6 +8,7 @@
 @import 'pages/supplier';
 @import 'pages/blogs';
 @import 'pages/contact';
+@import 'pages/faq';
 
 body,html {
     padding: 0;
@@ -33,5 +34,12 @@ a {
     &:hover {
         text-decoration: none;
         color: inherit;
+    }
+}
+
+@include breakpoint (untilTablet) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }

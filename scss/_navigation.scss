@@ -1,15 +1,32 @@
 .navigation {
+    @include breakpoint(untilTablet) {
+        padding: 1.5rem 0;
+    }
     .row {
         justify-content: space-between;
+        align-items: center;
         .nav-logo {
             display: flex;
             align-items: center;
+        }
+
+        .hamburger {
+            display: none;
+
+            @include breakpoint(untilTablet) {
+                display: block;
+            }
+
         }
     
         .menu {
             display: flex;
             align-items: center;
             justify-content: flex-end;
+
+            @include breakpoint(untilTablet) {
+                display: none;
+            }
 
             ul {
                 display: flex;
@@ -53,6 +70,39 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.offcanvas {
+    .offcanvas-header {
+        padding: 1.5rem 1rem;
+    }
+
+    .offcanvas-body {
+        background-color: $secondary;
+
+        .offcanvas-menu {
+            ul {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    padding: 1rem;
+
+                    &:hover, .active {
+                        background-color: white;
+                        color: $primary;
+                        font-weight: bold;
+                        border-right: 10px $primary solid;
+                    }
+                }
+
+                .button {
+                    width: 100%;
+                    margin-top: 1rem;
+                }
+            }   
         }
     }
 }
