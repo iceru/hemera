@@ -5,10 +5,6 @@
         background-color: $secondary;
         margin-bottom: 2rem;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-
         .blog-title {
             margin-bottom: .75rem;
         }
@@ -20,6 +16,12 @@
 
         .blog-desc {
             margin-bottom: 1rem;
+        }
+
+        @include breakpoint(untilTablet) {
+           .image-wrapper {
+               margin-bottom: 1rem;
+           }
         }
     }
 

@@ -215,6 +215,16 @@ h6 {
   margin-top: 2rem;
 }
 
+@media (max-width: 60em) {
+  .page-title {
+    padding: 60px;
+    margin-bottom: 1rem;
+  }
+  .page-title p {
+    font-size: 1rem;
+  }
+}
+
 .cta {
   position: relative;
 }
@@ -1296,10 +1306,6 @@ footer .copyright {
   margin-bottom: 2rem;
 }
 
-.blogs .blog-item:last-child {
-  margin-bottom: 0;
-}
-
 .blogs .blog-item .blog-title {
   margin-bottom: .75rem;
 }
@@ -1311,6 +1317,12 @@ footer .copyright {
 
 .blogs .blog-item .blog-desc {
   margin-bottom: 1rem;
+}
+
+@media (max-width: 60em) {
+  .blogs .blog-item .image-wrapper {
+    margin-bottom: 1rem;
+  }
 }
 
 .blogs .small-title {
