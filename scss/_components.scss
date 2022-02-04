@@ -337,3 +337,20 @@
   }
 }
  
+.video-popup {
+    width:75%;
+    margin:0 auto;
+}
+  
+.video-popup iframe{
+    width:100%;
+    margin:0 auto;
+}
+
+
+@include breakpoint(untilTablet) {
+    .video-popup {
+        width:90%;
+        margin:0 auto;
+    }
+}

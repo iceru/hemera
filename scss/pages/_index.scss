@@ -342,6 +342,37 @@
     background-color: $secondary;
     padding: 4rem;
     margin-bottom: 3rem;
+
+    h3 {
+        margin-bottom: 2rem;
+    }
+
+    .thumbnail-wrapper {
+        min-width: 300px;
+        width: 50vw;
+        box-shadow: -20px 20px $primary;
+        position: relative;
+    }
+
+    .play {
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $primary;
+        background-color: white;
+        padding: 1rem 2rem;
+        font-size: 2.5rem;
+    }
+
+    
+    @include breakpoint(untilTablet) {
+        .play {
+            padding: .5rem 1rem;
+            font-size: 1rem;
+        }
+    }
 }
 
 .start {

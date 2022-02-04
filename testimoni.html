@@ -41,51 +41,64 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="supplier">
+<body class="testimoni">
     <div data-include="/components/navigation.html"></div>
 
-    <div class="sliders wrapper">
+    <div class="wrapper">
+        <div class="sliders mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-2rem">Testimonial</h2>
+                        <p class="subtitle">
+                            Eitss.. Tunggu bentar deh, biar makin mantap gabung di Hemera Partner. Simak dulu apa kata
+                            mereka
+                            yang
+                            merasa senang dan bersyukur bisa sukses jualan online sebagai mitra kami:
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="mb-2rem">Testimonial</h2>
-                    <p class="subtitle">
-                        Eitss.. Tunggu bentar deh, biar makin mantap gabung di Hemera Partner. Simak dulu apa kata
-                        mereka
-                        yang
-                        merasa senang dan bersyukur bisa sukses jualan online sebagai mitra kami:
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slider-item">
-        <div class="list-image-item">
-            <div class="row">
-                <div class="col-12 col-lg-6">
-                    <div class="image-wrapper">
-                        <img src="/images/index/dropshipper.png" alt="Dropshiper">
+            <div class="slider-item">
+                <div>
+                    <div class="list-image-item">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <div class="image-wrapper">
+                                    <img src="/images/testimoni-1.png" alt="Novita Wijaya">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <h5 class="mb-2">Novita Wijaya</h5>
+                                <p class="grey-text mb-3">Ibu Rumah Tangga</p>
+                                <p>Gak nyangka banget, emak2 seperti saya bisa dapatkan jutaan rupiah cuma dari rumah. Awalnya bingung, tapi Hemera ngebimbing banget dan sekarang alhamdulillah udah lancar jualan.
+                                    Semuanya serba otomatis dan gak ribet. 
+                                    Makasih ya Hemera, sukses selalu.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <h5>Dropshipper</h5>
-                    <p>Enggak punya modal, dan pengen jualan? enggak perlu stock barang dan kirim barang
-                        plus dapat website E-commerce profesional</p>
-                </div>
-            </div>
-        </div>
-        <div class="list-image-item">
-            <div class="row">
-                <div class="col-12 col-lg-6">
-                    <div class="image-wrapper">
-                        <img src="/images/index/dropshipper.png" alt="Dropshiper">
+                <div>
+                    <div class="list-image-item">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <div class="image-wrapper">
+                                    <img src="/images/testimoni-2.png" alt="Fitria Rahma">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <h5>Fitria Rahma</h5>
+                                <p class="grey-text mb-3">Karyawan Swasta</p>
+                                <p>Kalo ada yang bilang jualan online itu susah dan ribet, coba dulu Hemera deh! Aku karyawan yg kerja jam 8 sampai jam 5 sore.
+                                    Gaji pas-pasan, sangat terbantu dengan penghasilan tambahan setelah gabung di Hemera.
+                                    Bisa jualan kapan aja dari HP, bimbingan mentor handal, modalnya kecil dan tanpa resiko. 
+                                    Temen2 ku heran, aku kliatannya santai tp kok ada aja duitnya. Heheh.. Nice work ;) </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <h5>Dropshipper</h5>
-                    <p>Enggak punya modal, dan pengen jualan? enggak perlu stock barang dan kirim barang
-                        plus dapat website E-commerce profesional</p>
                 </div>
             </div>
         </div>
@@ -283,7 +296,20 @@
             $(this).load($(this).attr("data-include"));
         });
 
-        $('.slider-item').slick()
+        $('.slider-item').slick({
+            slidesToShow: 1,
+            dots: true,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        })
     });
 </script>
 

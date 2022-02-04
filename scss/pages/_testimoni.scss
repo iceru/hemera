@@ -1,0 +1,22 @@
+.testimoni {
+
+    .row {
+        align-items: flex-start;
+        .list-image-item {
+            margin-left: 3rem;
+    
+            .image-wrapper {
+                margin-left: -3rem;
+            }
+        }
+        
+    }
+    .slick-slide {
+        margin: 0 27px;
+    }
+
+    .slick-list {
+        margin: 0 -27px;
+        padding:0 40% 0 0 !important;
+    }
+}

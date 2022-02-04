@@ -25,6 +25,15 @@
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <!-- Magnific Popup -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+        integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <link rel="stylesheet" href="css/style.css">
@@ -244,6 +253,27 @@
             Gimana Caranya? <br>
             Tonton Video dibawah Ini
         </h3>
+        <div class="item">
+            <a href="#video_popup_1" id="video_link_1">
+                <div class="thumbnail-wrapper">
+                    <span class="play rawgly">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </span>
+                    <div class="thumbnail ratio ratio-16x9">
+                        <img src="https://img.youtube.com/vi/Nsbp0GQHOGc/0.jpg"
+                            style="height: 100%; object-fit: cover;" class="w-100" alt="">
+                    </div>
+                </div>
+            </a>
+            <div id="video_popup_1" class=" mfp-hide d-flex video-popup">
+                <div class="ratio ratio-16x9 video" >
+                    <iframe src="https://www.youtube.com/embed/Nsbp0GQHOGc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="start">
@@ -566,6 +596,11 @@
         $("div[data-include]").each(function () {
             $(this).load($(this).attr("data-include"));
         });
+
+        $('#video_link_1').magnificPopup({
+            showCloseBtn: true,
+            closeMarkup: 'test'
+        });  
     });
 </script>
 
