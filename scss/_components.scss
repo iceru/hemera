@@ -96,6 +96,7 @@
     @include breakpoint(untilTablet) {
         padding: 0;
         padding-bottom: 2rem;
+        margin-bottom: 2rem;
 
         .background-mobile {
             padding: 0;
@@ -129,7 +130,15 @@
 
 
 .cta {
-    align-items: center;
+    position: relative;
+    .container {
+        margin-right: 0;
+        margin-left: auto;
+        max-width: 95vw;
+    }
+    .row {
+        align-items: center;
+    }
     .register-text {
         position: relative;
         z-index: 4;
@@ -154,7 +163,11 @@
     .image-wrapper {
         position: relative;
         text-align: end;
-        opacity: .7;
+        mix-blend-mode: multiply;
+    }
+    
+    .image-desktop {
+        padding-left: 0;
     }
 
     .image-mobile {
@@ -187,12 +200,21 @@
     }
 
     &.left {
+        .container {
+            margin-left: 0;
+        }
         .bg-wrapper {
             left: .75rem;
-            right: 0;
+            left: 0;
+
+            img {
+                width: 95%;
+            }
         }
         .image-wrapper {
             text-align: start;
+            position: relative;
+            left: 0;
         }
     }
 }

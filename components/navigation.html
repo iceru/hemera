@@ -11,7 +11,7 @@
             <div class="menu col-6 col-lg-10">
                 <ul>
                     <li class="menu-link">
-                        <a href="/index.html">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li class="menu-link">
                         <a href="/dropshipper.html">Dropshipper</a>
@@ -31,9 +31,9 @@
                     <li class="menu-link">
                         <a href="/contact-us.html">Contact Us</a>
                     </li>
-                    <li class="button btn-primary">
-                        <a href="/register.html">Daftar Dropshipper</a>
-                    </li>
+                    <a href="/register.html" class="button btn-primary">
+                        <li>Daftar Dropshipper</li>
+                    </a>
                 </ul>
             </div>
 
@@ -61,7 +61,7 @@
             <div class="offcanvas-menu">
                 <ul>
                     <li class="menu-link">
-                        <a href="/index.html">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li class="menu-link">
                         <a href="/dropshipper.html">Dropshipper</a>
@@ -81,11 +81,25 @@
                     <li class="menu-link">
                         <a href="/contact-us.html">Contact Us</a>
                     </li>
-                    <li class="button btn-primary">
-                        <a href="/register.html">Daftar Dropshipper</a>
-                    </li>
+                    <a href="/register.html" class="button btn-primary">
+                        <li>Daftar Dropshipper</li>
+                    </a>
                 </ul>
             </div>
         </div>
     </div>
 </nav>
+
+<script>
+    $(document).ready(function () {
+        var loc = window.location.pathname;
+
+        $('.menu').find('a').each(function() {
+            $(this).toggleClass('active', $(this).attr('href') == loc);
+        });
+
+        $('.offcanvas-menu').find('a').each(function() {
+            $(this).parent().toggleClass('active', $(this).attr('href') == loc);
+        });
+    });
+</script>

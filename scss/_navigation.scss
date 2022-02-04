@@ -90,17 +90,22 @@
                 li {
                     padding: 1rem;
 
-                    &:hover, .active {
+                    &.active {
                         background-color: white;
                         color: $primary;
                         font-weight: bold;
                         border-right: 10px $primary solid;
+                        margin: .5rem 0;
                     }
                 }
 
                 .button {
                     width: 100%;
                     margin-top: 1rem;
+
+                    li {
+                        padding: 0;
+                    }
                 }
             }   
         }

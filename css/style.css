@@ -66,7 +66,13 @@ h6 {
 }
 
 .wrapper {
-  padding: 100px 0;
+  padding: 80px 0;
+}
+
+@media (max-width: 60em) {
+  .wrapper {
+    padding: 40px 0;
+  }
 }
 
 .grey-text {
@@ -179,6 +185,7 @@ h6 {
   .hero-alt {
     padding: 0;
     padding-bottom: 2rem;
+    margin-bottom: 2rem;
   }
   .hero-alt .background-mobile {
     padding: 0;
@@ -209,6 +216,16 @@ h6 {
 }
 
 .cta {
+  position: relative;
+}
+
+.cta .container {
+  margin-right: 0;
+  margin-left: auto;
+  max-width: 95vw;
+}
+
+.cta .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -242,7 +259,11 @@ h6 {
 .cta .image-wrapper {
   position: relative;
   text-align: end;
-  opacity: .7;
+  mix-blend-mode: multiply;
+}
+
+.cta .image-desktop {
+  padding-left: 0;
 }
 
 .cta .image-mobile {
@@ -271,13 +292,23 @@ h6 {
   }
 }
 
+.cta.left .container {
+  margin-left: 0;
+}
+
 .cta.left .bg-wrapper {
   left: .75rem;
-  right: 0;
+  left: 0;
+}
+
+.cta.left .bg-wrapper img {
+  width: 95%;
 }
 
 .cta.left .image-wrapper {
   text-align: start;
+  position: relative;
+  left: 0;
 }
 
 .list-image-item {
@@ -565,16 +596,21 @@ h6 {
   padding: 1rem;
 }
 
-.offcanvas .offcanvas-body .offcanvas-menu ul li:hover, .offcanvas .offcanvas-body .offcanvas-menu ul li .active {
+.offcanvas .offcanvas-body .offcanvas-menu ul li.active {
   background-color: white;
   color: #FE0002;
   font-weight: bold;
   border-right: 10px #FE0002 solid;
+  margin: .5rem 0;
 }
 
 .offcanvas .offcanvas-body .offcanvas-menu ul .button {
   width: 100%;
   margin-top: 1rem;
+}
+
+.offcanvas .offcanvas-body .offcanvas-menu ul .button li {
+  padding: 0;
 }
 
 footer {
@@ -1127,10 +1163,6 @@ footer .copyright {
   margin-bottom: 3rem;
 }
 
-.register .container {
-  position: relative;
-}
-
 .faq {
   padding: 3rem 0;
 }
@@ -1201,16 +1233,11 @@ footer .copyright {
   position: relative;
 }
 
-.products .container .cta {
-  margin-bottom: 100px;
-}
-
 .products .container .cta p {
   margin-bottom: 0;
 }
 
 .product-items {
-  margin-bottom: 100px;
   text-align: center;
 }
 
@@ -1247,10 +1274,6 @@ footer .copyright {
 
 .supplier .hero-alt .background img {
   height: 100% !important;
-}
-
-.supplier .join {
-  padding: 6rem 0;
 }
 
 .supplier .join h2 {
@@ -1359,6 +1382,14 @@ footer .copyright {
   border-color: rgba(254, 0, 2, 0.25);
 }
 
+@media (max-width: 60em) {
+  .form-box {
+    margin-right: -1rem;
+    margin-bottom: 3rem;
+    margin-left: -1rem;
+  }
+}
+
 .faq-page .page-title {
   margin-bottom: 0;
 }
@@ -1366,12 +1397,6 @@ footer .copyright {
 .faq-page .faq.page {
   padding-top: 0;
   margin-top: -2rem;
-}
-
-.testimoni .row {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .testimoni .row .list-image-item {
@@ -1389,6 +1414,16 @@ footer .copyright {
 .testimoni .slick-list {
   margin: 0 -27px;
   padding: 0 40% 0 0 !important;
+}
+
+@media (max-width: 60em) {
+  .testimoni .slick-slide {
+    margin: 0 1rem;
+  }
+  .testimoni .slick-list {
+    margin: 0 -1rem;
+    padding: 0 12% 0 0 !important;
+  }
 }
 
 body, html {
