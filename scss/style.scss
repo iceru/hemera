@@ -44,3 +44,9 @@ a {
         padding-right: 1rem;
     }
 }
+
+@include breakpoint(largeDesktop) {
+    .container {
+        max-width: 1142px;
+    }
+}

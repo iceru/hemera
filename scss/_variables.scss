@@ -12,6 +12,10 @@ $secondary: #F3F4F7;
       @media (min-width: 64em) {
         @content;
       }
+    } @else if $point == largeDesktop {
+      @media (min-width: 87.5em) {
+        @content;
+      }
     } @else if $point == tablet {
       @media (min-width: 50em) {
         @content;
@@ -52,6 +56,7 @@ h2 {
 
 .h2-half {
   font-size: 48px;
+  line-height: 64px;
 }
 
 h3 {

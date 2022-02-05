@@ -1,6 +1,7 @@
 .supplier {
     .hero-alt {
-        margin-bottom: 6rem;
+        margin-bottom: 2rem;
+        padding-top: 4rem;
         .row {
             min-height: 60vh;
             align-items: center;
@@ -8,7 +9,7 @@
 
         .background {
             img {
-                height: 100% !important;
+                height: 110%;
             }
         }
     }
@@ -19,6 +20,22 @@
 
             @include breakpoint(untilTablet) {
                 padding: 0;
+            }
+        }
+
+        @include breakpoint(desktop) {
+            .first-row {
+                padding-right: 3rem;
+            }
+        }
+    }
+}
+
+.about-page {
+    .hero-alt {
+        .background {
+            img {
+                height: 90%;
             }
         }
     }

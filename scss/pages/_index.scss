@@ -1,64 +1,72 @@
 .hero {
-    .row {
-        .hero-text {
-            min-height: 80vh;
-            z-index: 4;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            h1 {
-                margin-bottom: 20px;
-            }
-
-            p {
-                margin-bottom: 2rem;
-            }
-
-            .button {
-                font-size: 18px;
-            }
-
-            @include breakpoint(untilTablet) {
-                order: 2;
-                padding: 1rem;
-                background-color: rgba($color: white, $alpha: 0.6);
-                margin-top: -6.5rem;
+    position: relative;
+    .container {
+        .row {
+            .hero-text {
+                min-height: 90vh;
+                z-index: 4;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-right: 5rem;
+    
+                h1 {
+                    margin-bottom: 20px;
+                }
+    
+                p {
+                    margin-bottom: 2rem;
+                }
+    
                 .button {
-                    width: 100%;
-
-                    &:first-child {
-                        margin-bottom: 1rem;
+                    font-size: 18px;
+                }
+    
+                @include breakpoint(untilTablet) {
+                    min-height: 0;
+                    padding-right: 0;
+                    order: 2;
+                    padding: 1rem;
+                    background-color: rgba($color: white, $alpha: 0.6);
+                    margin-top: -6.5rem;
+                    .button {
+                        width: 100%;
+    
+                        &:first-child {
+                            margin-bottom: 1rem;
+                        }
                     }
                 }
             }
-        }
-        .hero-image {
-            position: relative;
-            
-            .image-wrapper {
+            .hero-image {
                 position: absolute;
-                right: .75rem;
-                display: flex;
-                justify-content: flex-end;
-
-                img {
-                    width: 125%;
-                }
-            }
-            
-
-            @include breakpoint(untilTablet) {
-                order: 1;
-                padding: 0;
-
+                right: 0;
+                padding: 0 !important;
+                height: 100%;
+                
                 .image-wrapper {
-                    position: relative;
-                    right: 0;
+                    display: flex;
+                    justify-content: flex-end;
+                    height: 100%;
 
                     img {
                         width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                
+    
+                @include breakpoint(untilTablet) {
+                    order: 1;
+                    padding: 0;
+                    position: relative;
+    
+                    .image-wrapper {
+                        img {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -92,6 +100,23 @@
 
             h2 {
                 margin-bottom: 2rem;
+            }
+        }
+
+        @include breakpoint(desktop) {
+            .list-image-item {
+                margin-left: 3rem;
+    
+                .image-wrapper {
+                    margin-left: -3rem;
+                }
+                p {
+                    margin-bottom: 1rem;
+                }
+    
+                .button {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -164,7 +189,8 @@
         background-color: $secondary;
         position: relative;
         margin-bottom: 2rem;
-        margin-right: 4rem;
+        width: 87vw;
+        margin-right: auto;
 
         .d-flex {
             align-items: center;
@@ -176,6 +202,7 @@
             padding: 3rem;
             z-index: 4;
             position: relative;
+            padding-left: 8rem;
 
             &:after {
                 position: absolute;
@@ -202,17 +229,21 @@
             background-color: white;
             margin-right: 0;
             margin-bottom: 2rem;
+            width: 100%;
             .d-flex {
                 flex-direction: column;
             }
 
             .item-text {
-                padding: 0;
+                padding: 0 1rem;
             }
 
             .item-image {
                 background-color: $secondary;
                 margin-bottom: 2rem;
+                text-align: center;
+                padding: 2rem;
+                width: 100%;
             }
         }
     }
@@ -221,7 +252,8 @@
         background-color: $secondary;
         position: relative;
         margin-bottom: 2rem;
-        margin-left: 4rem;
+        width: 87vw;
+        margin-left: auto;
         .item-text {
             padding-left: 3rem;
         }
@@ -233,6 +265,7 @@
             padding: 3rem;
             z-index: 4;
             position: relative;
+            padding-right: 8rem;
 
             &:after {
                 position: absolute;
@@ -258,19 +291,23 @@
             background-color: white;
             margin-bottom: 2rem;
             margin-left: 0;
+            width: 100%;
             .d-flex {
                 flex-direction: column;
             }
 
             .item-text {
-                padding: 0;
+                padding: 0 1rem;
                 order: 2;
             }
 
             .item-image {
                 background-color: $secondary;
                 margin-bottom: 2rem;
+                width: 100%;
                 order: 1;
+                padding: 2rem;
+                text-align: center;
             }
         }
     }
@@ -278,7 +315,7 @@
 
 .aware {
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: 71px;
     .container {
         .row {
             min-height: 53vh;
@@ -344,7 +381,7 @@
     margin-bottom: 3rem;
 
     h3 {
-        margin-bottom: 2rem;
+        margin-bottom: 69px;
     }
 
     .thumbnail-wrapper {
@@ -395,6 +432,18 @@
 
 .problem {
     padding: 5rem 0;
+
+    @include breakpoint(desktop) {
+        .first-row {
+            padding-right: 2rem;
+        }
+
+        .image-wrapper {
+            img {
+                width: 90% !important;
+            }
+        }
+    }
 
     @include breakpoint(untilTablet) {
         padding: 2rem 0;
@@ -452,31 +501,76 @@
                 }
             }
 
-            .accordion {
-                .accordion-item {
-                    margin-bottom: 20px;
+            .accordion-container{
+                position: relative;
+                height: auto;
+                margin: 10px auto;
+            }
+            .set{
+                position: relative;
+                margin-bottom: 1rem;
+                width: 100%;
+                height: auto;
+                background-color: $secondary;
+                border-radius: 10px;
 
-                    .accordion-header {
-                        .accordion-button {
-                            background-color: $secondary;
-                            color: black;
-                            box-shadow: none;
-                            font-size: 21px;
-                            font-weight: bold;
-
-                            @include breakpoint(untilTablet) {
-                                font-size: 18px;
-                            }
+                > .header {
+                    display: block;
+                    padding: 1.5rem 2rem;
+                    text-decoration: none;
+                    font-weight: 600;
+                    -webkit-transition:all 0.2s linear;
+                    -moz-transition:all 0.2s linear;
+                    transition:all 0.2s linear;
+                    font-weight: 600;
+                    font-family: 'Barlow', sans-serif;
+                    cursor: pointer;
+                    font-size: 21px;
+                    
+                    &.active {
+                        i {
+                            transform: rotate(180deg);
                         }
                     }
 
-                    .accordion-body {
-                        background-color: $secondary;
-                        font-size: 18px;
+                    i {
+                        float: right;
+                        font-size: 12px;
+                        margin-top: 2px;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        background-color: $primary;
+                        border-radius: 50%;
 
-                        @include breakpoint(untilTablet) {
-                            font-size: 1rem;
+                        &::before {
+                            margin-top: 3px;
                         }
+                    }
+
+                    @include breakpoint(untilTablet) {
+                        padding: 1rem;
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .content {
+                background-color: $secondary;
+                display:none;
+                border: 0 0 10px 10px;
+
+                p {
+                    padding: 1.5rem 2rem;
+                    margin: 0;
+                    font-size: 18px;
+
+                    @include breakpoint(untilTablet) {
+                        padding: 1rem;
+                        padding-top: 0;
+                        font-size: 14px;
                     }
                 }
             }
