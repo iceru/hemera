@@ -66,6 +66,7 @@
                         &.active, &:hover {
                             color: $primary;
                             transition: .2s all ease;
+                            font-weight: bold;
 
                             &:after {
                                 visibility: visible;

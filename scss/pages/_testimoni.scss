@@ -1,15 +1,23 @@
 .testimoni {
-
-    .row {
-        .list-image-item {
-            margin-left: 3rem;
-    
-            .image-wrapper {
-                margin-left: -3rem;
+    overflow-x: hidden;
+    @include breakpoint(desktop) {
+        .sliders-wrapper {
+            .container {
+                max-width: 90vw;
+                margin-left: auto;
+                margin-right: 0;
             }
         }
-        
     }
+    .list-image-item {
+        margin-left: 3rem;
+
+        .image-wrapper {
+            margin-left: -3rem;
+            margin-right: 1rem;
+        }
+    }
+        
     .slick-slide {
         margin: 0 27px;
     }

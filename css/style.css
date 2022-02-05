@@ -592,6 +592,7 @@ h6 {
   color: #FE0002;
   -webkit-transition: .2s all ease;
   transition: .2s all ease;
+  font-weight: bold;
 }
 
 .navigation .row .menu ul li.menu-link a.active:after, .navigation .row .menu ul li.menu-link a:hover:after {
@@ -1134,7 +1135,7 @@ footer .copyright {
           align-items: center;
   text-align: center;
   background-color: #F3F4F7;
-  padding: 4rem;
+  padding: 6rem;
   margin-bottom: 3rem;
 }
 
@@ -1533,12 +1534,25 @@ footer .copyright {
   margin-top: -2rem;
 }
 
-.testimoni .row .list-image-item {
+.testimoni {
+  overflow-x: hidden;
+}
+
+@media (min-width: 80em) {
+  .testimoni .sliders-wrapper .container {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.testimoni .list-image-item {
   margin-left: 3rem;
 }
 
-.testimoni .row .list-image-item .image-wrapper {
+.testimoni .list-image-item .image-wrapper {
   margin-left: -3rem;
+  margin-right: 1rem;
 }
 
 .testimoni .slick-slide {
